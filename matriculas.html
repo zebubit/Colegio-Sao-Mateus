@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrículas | Colégio São Mateus</title>
+<meta name="description" content="Faça a matrícula do seu filho no Colégio São Mateus. Conheça o processo, documentos necessários e garanta a vaga para 2025.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#1a2fa8;--azul-escuro:#0d1a6e;--amarelo:#f5c800;--amarelo-claro:#ffe033;--branco:#ffffff;--cinza:#f4f6fc;--texto:#0f172a;--texto-claro:#475569;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;color:var(--texto);overflow-x:hidden;background:var(--branco);}
+a{text-decoration:none;color:inherit;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,26,110,0.97);backdrop-filter:blur(16px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;box-shadow:0 2px 24px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-logo img{height:44px;width:auto;border-radius:6px;object-fit:contain;}
+.nav-logo-name{font-family:'Bebas Neue',cursive;font-size:20px;color:var(--branco);letter-spacing:2px;line-height:1.1;}
+.nav-logo-sub{display:block;font-size:9px;color:var(--amarelo);letter-spacing:3px;font-weight:600;text-transform:uppercase;}
+.nav-back{color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:color 0.2s;display:flex;align-items:center;gap:6px;}
+.nav-back:hover{color:var(--amarelo);}
+.nav-cta-btn{background:var(--amarelo);color:var(--azul-escuro);padding:9px 20px;border-radius:6px;font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase;transition:all 0.2s;}
+.nav-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(245,200,0,0.4);}
+
+/* HERO */
+.page-hero{min-height:52vh;display:flex;align-items:center;background:linear-gradient(135deg,#0d1a6e 0%,#1a2fa8 60%,#1e40af 100%);padding:120px 5% 80px;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:clamp(120px,20vw,200px);opacity:0.06;line-height:1;}
+.page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,200,0,0.15);border:1px solid rgba(245,200,0,0.4);color:var(--amarelo);padding:7px 16px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;}
+.page-hero h1{font-family:'Bebas Neue',cursive;font-size:clamp(48px,8vw,90px);color:var(--branco);line-height:0.95;letter-spacing:2px;margin-bottom:16px;}
+.page-hero h1 .yl{color:var(--amarelo);}
+.page-hero p{font-size:clamp(15px,1.8vw,18px);color:rgba(255,255,255,0.82);line-height:1.7;max-width:560px;margin-bottom:32px;}
+.page-hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--amarelo);color:var(--azul-escuro);padding:15px 32px;border-radius:8px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px;transition:all 0.3s;box-shadow:0 8px 32px rgba(245,200,0,0.45);}
+.btn-primary:hover{background:var(--amarelo-claro);transform:translateY(-3px);}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,0.4);color:var(--branco);padding:15px 32px;border-radius:8px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;transition:all 0.3s;}
+.btn-outline:hover{border-color:var(--branco);background:rgba(255,255,255,0.12);transform:translateY(-3px);}
+
+/* PASSOS */
+.section{padding:80px 5%;}
+.section-label{display:inline-block;color:var(--azul);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:3px;margin-bottom:14px;position:relative;padding-left:22px;}
+.section-label::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:12px;height:3px;background:var(--amarelo);border-radius:2px;}
+.section-title{font-family:'Bebas Neue',cursive;font-size:clamp(34px,5vw,58px);color:var(--azul-escuro);letter-spacing:1px;line-height:1.0;margin-bottom:16px;}
+.section-title span{color:var(--azul);}
+.section-title .yl{color:var(--amarelo);}
+
+.passos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;counter-reset:passo;}
+.passo-card{background:var(--branco);border-radius:20px;padding:32px 24px;box-shadow:0 4px 24px rgba(0,0,0,0.07);border:1px solid #e8edf8;transition:all 0.3s;position:relative;counter-increment:passo;}
+.passo-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(26,47,168,0.12);}
+.passo-num{font-family:'Bebas Neue',cursive;font-size:56px;color:rgba(26,47,168,0.1);line-height:1;margin-bottom:4px;}
+.passo-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,var(--azul-escuro),var(--azul));display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.passo-icon svg{width:30px;height:30px;stroke:white;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.passo-title{font-family:'Bebas Neue',cursive;font-size:22px;color:var(--azul-escuro);letter-spacing:1px;margin-bottom:8px;}
+.passo-desc{font-size:13px;color:var(--texto-claro);line-height:1.7;}
+.passo-connector{position:absolute;top:50px;right:-12px;width:24px;height:2px;background:var(--amarelo);z-index:1;}
+.passo-card:last-child .passo-connector{display:none;}
+
+/* DOCUMENTOS */
+.docs-section{padding:80px 5%;background:var(--cinza);}
+.docs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+.doc-card{background:var(--branco);border-radius:16px;padding:28px 22px;display:flex;align-items:flex-start;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05);transition:all 0.3s;border-left:4px solid var(--azul);}
+.doc-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,47,168,0.1);}
+.doc-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--azul-escuro),var(--azul));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.doc-icon svg{width:26px;height:26px;stroke:white;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.doc-body{}
+.doc-title{font-weight:800;font-size:14px;color:var(--azul-escuro);margin-bottom:4px;}
+.doc-desc{font-size:12px;color:var(--texto-claro);line-height:1.6;}
+
+/* FORM */
+.form-section{padding:80px 5%;}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1100px;margin:0 auto;}
+.form-info{}
+.form-info .section-label{margin-bottom:14px;}
+.form-info .section-title{margin-bottom:20px;}
+.form-info p{font-size:15px;color:var(--texto-claro);line-height:1.8;margin-bottom:24px;}
+.form-contatos{display:flex;flex-direction:column;gap:14px;}
+.form-contato-item{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--texto);}
+.form-contato-item span{width:40px;height:40px;background:rgba(26,47,168,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.form-contato-item span svg{width:20px;height:20px;stroke:var(--azul);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.form-contato-item strong{display:block;font-size:11px;color:var(--texto-claro);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+.form-box{background:var(--branco);border-radius:24px;padding:40px;box-shadow:0 8px 48px rgba(26,47,168,0.1);border:1px solid #e8edf8;}
+.form-box h3{font-family:'Bebas Neue',cursive;font-size:28px;color:var(--azul-escuro);letter-spacing:1px;margin-bottom:24px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.form-row.full{grid-template-columns:1fr;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-group label{font-size:11px;font-weight:700;color:var(--texto-claro);text-transform:uppercase;letter-spacing:1px;}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid #dde3f0;border-radius:10px;padding:12px 16px;font-size:14px;font-family:'Montserrat',sans-serif;color:var(--texto);transition:border-color 0.2s;outline:none;background:var(--cinza);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--azul);background:var(--branco);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.form-submit{width:100%;background:var(--azul);color:var(--branco);border:none;border-radius:10px;padding:16px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:all 0.3s;margin-top:8px;}
+.form-submit:hover{background:var(--azul-escuro);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,47,168,0.3);}
+.form-note{font-size:11px;color:var(--texto-claro);text-align:center;margin-top:12px;line-height:1.5;}
+
+/* CTA */
+.cta-section{padding:80px 5%;background:linear-gradient(135deg,var(--azul-escuro),var(--azul));}
+.cta-inner{max-width:700px;margin:0 auto;text-align:center;}
+.cta-inner h2{font-family:'Bebas Neue',cursive;font-size:clamp(36px,5vw,60px);color:var(--branco);letter-spacing:1px;margin-bottom:16px;line-height:1.0;}
+.cta-inner h2 .yl{color:var(--amarelo);}
+.cta-inner p{font-size:15px;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* FOOTER */
+footer{background:var(--azul-escuro);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo-wrap{display:flex;align-items:center;gap:12px;}
+.footer-logo-wrap img{height:38px;border-radius:6px;}
+.footer-name{font-family:'Bebas Neue',cursive;font-size:18px;color:var(--branco);letter-spacing:2px;}
+.footer-sub{font-size:9px;color:var(--amarelo);letter-spacing:2px;font-weight:600;text-transform:uppercase;}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.4);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.passos-grid{grid-template-columns:repeat(2,1fr);}.passo-connector{display:none;}}
+@media(max-width:900px){.docs-grid{grid-template-columns:repeat(2,1fr);}.form-wrap{grid-template-columns:1fr;}}
+@media(max-width:560px){.docs-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.page-hero-btns,.cta-btns{flex-direction:column;}.nav-back span{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="LOGO.webp" alt="CSM">
+    <div>
+      <span class="nav-logo-name">Colégio São Mateus</span>
+      <span class="nav-logo-sub">Desde 1980 · Cuiabá MT</span>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    <span>Voltar</span>
+  </a>
+  <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20informações%20sobre%20matrículas%20no%20CSM." target="_blank" class="nav-cta-btn">Falar pelo WhatsApp</a>
+</nav>
+
+<section class="page-hero">
+  <div>
+    <div class="page-hero-badge"><span style="width:8px;height:8px;background:var(--amarelo);border-radius:50%;flex-shrink:0;"></span>Vagas Abertas · 2025</div>
+    <h1>Matrículas<br><span class="yl">Abertas</span></h1>
+    <p>Garanta já a vaga do seu filho no Colégio São Mateus. Processo simples, rápido e com atendimento personalizado para sua família.</p>
+    <div class="page-hero-btns">
+      <a href="#formulario" class="btn-primary">Solicitar Matrícula</a>
+      <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20fazer%20a%20matrícula%20no%20CSM." target="_blank" class="btn-outline">Falar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- PASSOS -->
+<section class="section">
+  <span class="section-label">Como Funciona</span>
+  <h2 class="section-title">Processo de <span class="yl">Matrícula</span></h2>
+  <p style="color:var(--texto-claro);font-size:15px;line-height:1.7;max-width:600px;">Matricular seu filho no CSM é simples e rápido. Veja o passo a passo abaixo.</p>
+  <div class="passos-grid">
+    <div class="passo-card">
+      <div class="passo-num">01</div>
+      <span class="passo-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 14a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10a16 16 0 0 0 5.91 5.91l1.37-1.37a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+      <div class="passo-title">Entre em Contato</div>
+      <p class="passo-desc">Preencha o formulário nesta página ou entre em contato pelo WhatsApp. Nossa equipe retornará em até 24 horas úteis.</p>
+      <div class="passo-connector"></div>
+    </div>
+    <div class="passo-card">
+      <div class="passo-num">02</div>
+      <span class="passo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+      <div class="passo-title">Visita à Escola</div>
+      <p class="passo-desc">Agendamos uma visita guiada para você conhecer as instalações, conversar com a equipe pedagógica e tirar todas as dúvidas.</p>
+      <div class="passo-connector"></div>
+    </div>
+    <div class="passo-card">
+      <div class="passo-num">03</div>
+      <span class="passo-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+      <div class="passo-title">Entrega de Documentos</div>
+      <p class="passo-desc">Reúna os documentos necessários (listados abaixo) e entregue na secretaria ou envie digitalmente por WhatsApp.</p>
+      <div class="passo-connector"></div>
+    </div>
+    <div class="passo-card">
+      <div class="passo-num">04</div>
+      <span class="passo-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+      <div class="passo-title">Vaga Confirmada!</div>
+      <p class="passo-desc">Após a análise e assinatura do contrato, a vaga está garantida. Bem-vindo à família CSM!</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTOS -->
+<section class="docs-section">
+  <span class="section-label">Documentação Necessária</span>
+  <h2 class="section-title">Documentos para <span class="yl">Matrícula</span></h2>
+  <p style="color:var(--texto-claro);font-size:15px;line-height:1.7;max-width:600px;">Separe os documentos com antecedência para agilizar o processo de matrícula do seu filho.</p>
+  <div class="docs-grid">
+    <div class="doc-card">
+      <span class="doc-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>
+      <div class="doc-body">
+        <div class="doc-title">RG e CPF do Aluno</div>
+        <p class="doc-desc">Cópia do documento de identidade e CPF da criança. Para bebês, certidão de nascimento.</p>
+      </div>
+    </div>
+    <div class="doc-card">
+      <span class="doc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+      <div class="doc-body">
+        <div class="doc-title">Documentos dos Responsáveis</div>
+        <p class="doc-desc">RG, CPF e comprovante de endereço atualizado (últimos 90 dias) do responsável legal.</p>
+      </div>
+    </div>
+    <div class="doc-card">
+      <span class="doc-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+      <div class="doc-body">
+        <div class="doc-title">Histórico Escolar</div>
+        <p class="doc-desc">Boletim ou histórico escolar do ano anterior (exceto para alunos que iniciam o Berçário).</p>
+      </div>
+    </div>
+    <div class="doc-card">
+      <span class="doc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+      <div class="doc-body">
+        <div class="doc-title">Cartão de Vacinação</div>
+        <p class="doc-desc">Caderneta de vacinação atualizada, conforme calendário do Ministério da Saúde.</p>
+      </div>
+    </div>
+    <div class="doc-card">
+      <span class="doc-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+      <div class="doc-body">
+        <div class="doc-title">2 Fotos 3×4</div>
+        <p class="doc-desc">Fotos recentes do aluno para compor o prontuário escolar e carteirinha de identificação.</p>
+      </div>
+    </div>
+    <div class="doc-card">
+      <span class="doc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
+      <div class="doc-body">
+        <div class="doc-title">Atestado de Saúde</div>
+        <p class="doc-desc">Atestado médico recente com aptidão para atividades escolares (obrigatório para Ed. Infantil).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section class="form-section" id="formulario">
+  <div class="form-wrap">
+    <div class="form-info">
+      <span class="section-label">Fale Conosco</span>
+      <h2 class="section-title">Solicite sua <span class="yl">Matrícula</span></h2>
+      <p>Preencha o formulário ao lado e nossa equipe entrará em contato para orientar você em cada etapa do processo de matrícula.</p>
+      <div class="form-contatos">
+        <div class="form-contato-item">
+          <span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <strong>Telefone / WhatsApp</strong>
+            (65) 3634-3000 · (65) 98442-7124
+          </div>
+        </div>
+        <div class="form-contato-item">
+          <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <strong>Secretaria</strong>
+            Av. Itália, 17 · Jardim Tropical · Cuiabá MT
+          </div>
+        </div>
+        <div class="form-contato-item">
+          <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          <div>
+            <strong>Horário de Atendimento</strong>
+            Segunda a Sexta, 7h às 17h
+          </div>
+        </div>
+        <div class="form-contato-item">
+          <span><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <div>
+            <strong>E-mail</strong>
+            secretaria@colegiosaomateus.com.br
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h3>Solicitar Matrícula</h3>
+      <form onsubmit="enviarWhatsApp(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome-aluno">Nome do Aluno</label>
+            <input type="text" id="nome-aluno" placeholder="Nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="idade">Idade / Ano Escolar</label>
+            <select id="idade">
+              <option value="">Selecione</option>
+              <option>Berçário (0–1 ano)</option>
+              <option>Maternal (1–3 anos)</option>
+              <option>Pré-escola (4–5 anos)</option>
+              <option>1° Ano – Fund. I</option>
+              <option>2° Ano – Fund. I</option>
+              <option>3° Ano – Fund. I</option>
+              <option>4° Ano – Fund. I</option>
+              <option>5° Ano – Fund. I</option>
+              <option>6° Ano – Fund. II</option>
+              <option>7° Ano – Fund. II</option>
+              <option>8° Ano – Fund. II</option>
+              <option>9° Ano – Fund. II</option>
+              <option>1° Ano – Ensino Médio</option>
+              <option>2° Ano – Ensino Médio</option>
+              <option>3° Ano – Ensino Médio</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome-resp">Nome do Responsável</label>
+            <input type="text" id="nome-resp" placeholder="Nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">WhatsApp</label>
+            <input type="tel" id="telefone" placeholder="(65) 9 0000-0000" required>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" placeholder="Dúvidas, informações sobre o aluno ou qualquer detalhe que queira compartilhar..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Enviar pelo WhatsApp ➜</button>
+        <p class="form-note">Ao clicar, você será redirecionado ao WhatsApp com os dados já preenchidos. Nenhuma informação é armazenada nesta página.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Vagas limitadas.<br>Garanta <span class="yl">a sua!</span></h2>
+    <p>Cada ano letivo começa com vagas reduzidas. Entre em contato agora e assegure o lugar do seu filho no Colégio São Mateus.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20garantir%20a%20vaga%20do%20meu%20filho%20no%20CSM." target="_blank" class="btn-primary">Falar pelo WhatsApp</a>
+      <a href="tel:6536343000" class="btn-outline">Ligar Agora</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo-wrap">
+    <img src="LOGO.webp" alt="CSM">
+    <div>
+      <div class="footer-name">Colégio São Mateus</div>
+      <div class="footer-sub">Ensino Forte · Desde 1980</div>
+    </div>
+  </div>
+  <p class="footer-copy">Av. Itália, 17 · Jardim Tropical · Cuiabá MT · (65) 3634-3000</p>
+  <p class="footer-copy">© 2025 Colégio São Mateus. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function enviarWhatsApp(e) {
+  e.preventDefault();
+  const aluno = document.getElementById('nome-aluno').value;
+  const ano = document.getElementById('idade').value;
+  const resp = document.getElementById('nome-resp').value;
+  const tel = document.getElementById('telefone').value;
+  const msg = document.getElementById('mensagem').value;
+  let texto = 'Olá! Gostaria de solicitar matrícula no CSM.\n\n*Aluno:* ' + aluno + '\n*Ano escolar:* ' + ano + '\n*Responsável:* ' + resp + '\n*Telefone:* ' + tel;
+  if (msg.trim()) texto += '\n*Mensagem:* ' + msg;
+  window.open('https://wa.me/5565984427124?text=' + encodeURIComponent(texto), '_blank');
+}
+</script>
+
+</body>
+</html>

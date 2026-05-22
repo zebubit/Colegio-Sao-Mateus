@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-# Pastas internas - nao indexar (caso sejam enviadas ao servidor por engano)
-Disallow: /CONTRATOS/
-Disallow: /ORCAMENTOS/
-Disallow: /DESATUALIZADO/
-Disallow: /EXTENSOES_SITE/
-
 Sitemap: https://csmcuiabamt.com.br/sitemap.xml

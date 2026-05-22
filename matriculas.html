@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Matrículas | Colégio São Mateus</title>
 <meta name="description" content="Faça a matrícula do seu filho no Colégio São Mateus. Conheça o processo, os documentos necessários e garanta a vaga.">
 <meta name="author" content="Colégio São Mateus">
@@ -148,17 +150,17 @@ footer{background:var(--azul-escuro);padding:32px 5%;display:flex;align-items:ce
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
     <span>Voltar</span>
   </a>
-  <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20informações%20sobre%20matrículas%20no%20CSM." target="_blank" class="nav-cta-btn">Falar pelo WhatsApp</a>
+  <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20informações%20sobre%20matrículas%20no%20CSM." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">Falar pelo WhatsApp</a>
 </nav>
 
 <section class="page-hero">
   <div>
-    <div class="page-hero-badge"><span style="width:8px;height:8px;background:var(--amarelo);border-radius:50%;flex-shrink:0;"></span>Vagas Abertas · 2025</div>
+    <div class="page-hero-badge"><span style="width:8px;height:8px;background:var(--amarelo);border-radius:50%;flex-shrink:0;"></span>Vagas Abertas · 2027</div>
     <h1>Matrículas<br><span class="yl">Abertas</span></h1>
     <p>Garanta já a vaga do seu filho no Colégio São Mateus. Processo simples, rápido e com atendimento personalizado para sua família.</p>
     <div class="page-hero-btns">
       <a href="#formulario" class="btn-primary">Solicitar Matrícula</a>
-      <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20fazer%20a%20matrícula%20no%20CSM." target="_blank" class="btn-outline">Falar pelo WhatsApp</a>
+      <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20fazer%20a%20matrícula%20no%20CSM." target="_blank" rel="noopener noreferrer" class="btn-outline">Falar pelo WhatsApp</a>
     </div>
   </div>
 </section>
@@ -347,7 +349,7 @@ footer{background:var(--azul-escuro);padding:32px 5%;display:flex;align-items:ce
     <h2>Vagas limitadas.<br>Garanta <span class="yl">a sua!</span></h2>
     <p>Cada ano letivo começa com vagas reduzidas. Entre em contato agora e assegure o lugar do seu filho no Colégio São Mateus.</p>
     <div class="cta-btns">
-      <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20garantir%20a%20vaga%20do%20meu%20filho%20no%20CSM." target="_blank" class="btn-primary">Falar pelo WhatsApp</a>
+      <a href="https://wa.me/5565984427124?text=Olá!%20Gostaria%20de%20garantir%20a%20vaga%20do%20meu%20filho%20no%20CSM." target="_blank" rel="noopener noreferrer" class="btn-primary">Falar pelo WhatsApp</a>
       <a href="tel:6536343000" class="btn-outline">Ligar Agora</a>
     </div>
   </div>
@@ -362,7 +364,7 @@ footer{background:var(--azul-escuro);padding:32px 5%;display:flex;align-items:ce
     </div>
   </div>
   <p class="footer-copy">Av. Itália, 17 · Jardim Tropical · Cuiabá MT · (65) 3634-3000</p>
-  <p class="footer-copy">© 2025 Colégio São Mateus. Todos os direitos reservados.</p>
+  <p class="footer-copy">© 2026 Colégio São Mateus. Todos os direitos reservados.</p>
 </footer>
 
 <script>
@@ -375,7 +377,7 @@ function enviarWhatsApp(e) {
   const msg = document.getElementById('mensagem').value;
   let texto = 'Olá! Gostaria de solicitar matrícula no CSM.\n\n*Aluno:* ' + aluno + '\n*Ano escolar:* ' + ano + '\n*Responsável:* ' + resp + '\n*Telefone:* ' + tel;
   if (msg.trim()) texto += '\n*Mensagem:* ' + msg;
-  window.open('https://wa.me/5565984427124?text=' + encodeURIComponent(texto), '_blank');
+  window.open('https://wa.me/5565984427124?text=' + encodeURIComponent(texto), '_blank', 'noopener');
 }
 </script>
 

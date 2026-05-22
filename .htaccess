@@ -1,4 +1,4 @@
-# ===== Colegio Sao Mateus - configuracao do servidor =====
+# ===== Colegio Sao Mateus - configuracao do servidor (Apache) =====
 
 RewriteEngine On
 
@@ -34,9 +34,15 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; upgrade-insecure-requests"
 </IfModule>
 
 # Protege arquivos sensiveis
-<FilesMatch "\.(bak|backup|log|ini)$">
+<FilesMatch "\.(bak|backup|log|ini|sh|env)$">
   Require all denied
 </FilesMatch>
+
+# Bloqueia listagem de diretorios
+Options -Indexes

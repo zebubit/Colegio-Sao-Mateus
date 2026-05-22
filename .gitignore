@@ -1,1 +1,9 @@
-teste/
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Pastas internas - NAO versionar (somente o site vai para o GitHub)
+CONTRATOS/
+ORCAMENTOS/
+DESATUALIZADO/
+EXTENSOES_SITE/

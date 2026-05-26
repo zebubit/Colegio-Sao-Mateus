@@ -157,8 +157,10 @@ section { padding: 100px 5%; }
 .gallery-btn { width: 48px; height: 48px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); color: var(--branco); font-size: 18px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
 .gallery-btn:hover { background: var(--amarelo); border-color: var(--amarelo); color: var(--azul-escuro); }
 .gallery-dots { display: flex; gap: 8px; }
-.gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; transition: all 0.3s; border: none; }
-.gallery-dot.active { background: var(--amarelo); width: 24px; border-radius: 4px; }
+.gallery-dot { width: 44px; height: 44px; padding: 0; background: transparent; cursor: pointer; transition: all 0.3s; border: none; position: relative; display: inline-flex; align-items: center; justify-content: center; }
+.gallery-dot::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.3); transition: all 0.3s; }
+.gallery-dot.active::before { background: var(--amarelo); width: 24px; border-radius: 4px; }
+.gallery-dot:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; border-radius: 50%; }
 
 /* ENSINO */
 #ensino { background: var(--cinza); }
@@ -254,7 +256,7 @@ section { padding: 100px 5%; }
 .dep-author { display: flex; align-items: center; gap: 14px; }
 .dep-avatar { width: 44px; height: 44px; background: var(--amarelo); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', cursive; font-size: 18px; color: var(--azul-escuro); flex-shrink: 0; }
 .dep-name { font-weight: 700; font-size: 14px; color: var(--branco); }
-.dep-role { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+.dep-role { font-size: 12px; color: rgba(255,255,255,0.78); margin-top: 2px; }
 .dep-stars-sm { color: var(--amarelo); font-size: 12px; margin-top: 4px; }
 .dep-avalie-wrap { text-align: center; margin-top: 48px; position: relative; z-index: 1; }
 .dep-avalie-btn { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.08); border: 2px solid rgba(245,200,0,0.65); color: var(--amarelo); font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.3s; backdrop-filter: blur(8px); }
@@ -296,7 +298,7 @@ section { padding: 100px 5%; }
 .form-group { margin-bottom: 16px; }
 .form-group label { display: block; font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
 .form-group input, .form-group select { width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: var(--branco); font-family: 'Montserrat', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s; }
-.form-group input::placeholder { color: rgba(255,255,255,0.4); }
+.form-group input::placeholder { color: rgba(255,255,255,0.75); }
 .form-group input:focus, .form-group select:focus { border-color: var(--amarelo); }
 .form-group select option { color: var(--texto); background: var(--branco); }
 .form-submit { width: 100%; padding: 16px; background: var(--amarelo); color: var(--azul-escuro); border: none; border-radius: 10px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; margin-top: 8px; }
@@ -331,18 +333,23 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
 .footer-logo img { height: 46px; width: auto; border-radius: 6px; }
 .footer-logo-name { font-family: 'Bebas Neue', cursive; font-size: 20px; letter-spacing: 2px; color: var(--branco); line-height: 1.1; }
 .footer-logo-sub { display: block; font-size: 9px; letter-spacing: 3px; color: var(--amarelo); font-weight: 600; }
-.footer-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 22px; }
+.footer-desc { font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.8; margin-bottom: 22px; }
 .footer-social { display: flex; gap: 10px; }
-.footer-social a { width: 38px; height: 38px; background: rgba(255,255,255,0.07); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+.footer-social a { width: 44px; height: 44px; background: rgba(255,255,255,0.07); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+.footer-social a:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
 .footer-social a:hover { background: var(--amarelo); transform: translateY(-3px); }
-.footer-col h5 { font-family: 'Bebas Neue', cursive; font-size: 18px; letter-spacing: 1px; color: var(--amarelo); margin-bottom: 20px; }
+.footer-col h3 { font-family: 'Bebas Neue', cursive; font-size: 18px; letter-spacing: 1px; color: var(--amarelo); margin-bottom: 20px; font-weight: normal; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-links a { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-links a:hover, .footer-links a:focus-visible { color: var(--amarelo); text-decoration: underline; }
 .footer-links a:hover { color: var(--amarelo); }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-.footer-copy { font-size: 12px; color: rgba(255,255,255,0.38); }
-.footer-dev { font-size: 12px; color: rgba(255,255,255,0.28); margin-top: 12px; text-align: center; width: 100%; }
-.footer-dev a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.75); }
+.footer-dev { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 12px; text-align: center; width: 100%; }
+.footer-dev a { color: rgba(255,255,255,0.85); text-decoration: underline; transition: color 0.2s; }
+.footer-dev a:hover, .footer-dev a:focus-visible { color: var(--amarelo); }
+.footer-inline-link { color: rgba(255,255,255,0.85); text-decoration: underline; transition: color 0.2s; }
+.footer-inline-link:hover, .footer-inline-link:focus-visible { color: var(--amarelo); }
 .footer-dev a:hover { color: var(--amarelo); }
 
 /* WHATSAPP FLOAT */
@@ -605,28 +612,28 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
     <div class="video-item" onclick="toggleVideo(this)">
       <video src="VID1.mp4" poster="POSTER1.webp" preload="none" loop playsinline></video>
       <div class="video-play-overlay">
-        <button class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <button class="play-btn" type="button" aria-label="Reproduzir vídeo: Estrutura"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg></button>
         <div class="video-label">Estrutura</div>
       </div>
     </div>
     <div class="video-item" onclick="toggleVideo(this)">
       <video src="VID2.mp4" poster="POSTER2.webp" preload="none" loop playsinline></video>
       <div class="video-play-overlay">
-        <button class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <button class="play-btn" type="button" aria-label="Reproduzir vídeo: Atividades"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg></button>
         <div class="video-label">Atividades</div>
       </div>
     </div>
     <div class="video-item" onclick="toggleVideo(this)">
       <video src="VID3.mp4" poster="POSTER3.webp" preload="none" loop playsinline></video>
       <div class="video-play-overlay">
-        <button class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <button class="play-btn" type="button" aria-label="Reproduzir vídeo: Esportes"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg></button>
         <div class="video-label">Esportes</div>
       </div>
     </div>
     <div class="video-item" onclick="toggleVideo(this)">
       <video src="VID4.mp4" poster="POSTER4.webp" preload="none" loop playsinline></video>
       <div class="video-play-overlay">
-        <button class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <button class="play-btn" type="button" aria-label="Reproduzir vídeo: Comunidade"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg></button>
         <div class="video-label">Comunidade</div>
       </div>
     </div>
@@ -734,10 +741,10 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
     </div>
     <div class="matricula-form">
       <div class="form-title">Quero saber mais!</div>
-      <div class="form-group"><label>Nome completo</label><input type="text" id="mat_nome" placeholder="Seu nome"></div>
-      <div class="form-group"><label>WhatsApp</label><input type="tel" id="mat_tel" placeholder="(65) 99999-9999"></div>
+      <div class="form-group"><label for="mat_nome">Nome completo</label><input type="text" id="mat_nome" placeholder="Seu nome" autocomplete="name"></div>
+      <div class="form-group"><label for="mat_tel">WhatsApp</label><input type="tel" id="mat_tel" placeholder="(65) 99999-9999" autocomplete="tel"></div>
       <div class="form-group">
-        <label>Série de interesse</label>
+        <label for="mat_serie">Série de interesse</label>
         <select id="mat_serie">
           <option value="">Selecione...</option>
           <option>Berçário</option>
@@ -792,6 +799,7 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
     </div>
     <div class="map-block reveal rd1">
       <iframe class="map-embed"
+        title="Mapa do Colégio São Mateus na Av. Itália, 17, Jardim Tropical, Cuiabá, MT"
         src="https://www.google.com/maps?q=Av.+It%C3%A1lia,+17,+Jardim+Tropical,+Cuiab%C3%A1,+MT&output=embed"
         allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
@@ -827,7 +835,7 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
       </div>
     </div>
     <div class="footer-col">
-      <h5>Ensino</h5>
+      <h3>Ensino</h3>
       <ul class="footer-links">
         <li><a href="#ensino">Berçário</a></li>
         <li><a href="#ensino">Educação Infantil</a></li>
@@ -837,7 +845,7 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Academia</h5>
+      <h3>Academia</h3>
       <ul class="footer-links">
         <li><a href="#extracurricular">Natação</a></li>
         <li><a href="#extracurricular">Futsal</a></li>
@@ -847,7 +855,7 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Contato</h5>
+      <h3>Contato</h3>
       <ul class="footer-links">
         <li><a href="tel:6536343000">(65) 3634-3000</a></li>
         <li><a href="https://wa.me/5565984427124?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener noreferrer">(65) 98442-7124</a></li>
@@ -858,7 +866,7 @@ footer { background: var(--azul-escuro); padding: 60px 5% 28px; color: var(--bra
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2026 Colégio São Mateus. Todos os direitos reservados. · <a href="politica-de-privacidade.html" style="color:rgba(255,255,255,0.4);text-decoration:none;" onmouseover="this.style.color='#f5c800'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Política de Privacidade</a> · <a href="termos-de-uso.html" style="color:rgba(255,255,255,0.4);text-decoration:none;" onmouseover="this.style.color='#f5c800'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Termos de Uso</a></p>
+    <p class="footer-copy">© 2026 Colégio São Mateus. Todos os direitos reservados. · <a href="politica-de-privacidade.html" class="footer-inline-link">Política de Privacidade</a> · <a href="termos-de-uso.html" class="footer-inline-link">Termos de Uso</a></p>
     <p class="footer-copy">Av. Itália, 17 · Jardim Tropical · Cuiabá MT · CNPJ 00.817.900/0001-26</p>
   </div>
   <div class="footer-dev">Desenvolvido por <a href="https://zebubit.com.br" target="_blank" rel="noopener noreferrer">Zebubit Assessoria</a> · zebubit.com.br</div>
@@ -932,6 +940,9 @@ function initGallery() {
   for (var i = 0; i <= gMax; i++) {
     var d = document.createElement('button');
     d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+    d.type = 'button';
+    d.setAttribute('aria-label', 'Ir para slide ' + (i + 1));
+    if (i === 0) d.setAttribute('aria-current', 'true');
     (function(idx) { d.addEventListener('click', function() { galleryGoTo(idx); gRestart(); }); })(i);
     dots.appendChild(d);
   }
@@ -942,7 +953,11 @@ function initGallery() {
 function galleryGoTo(idx) {
   gIdx = Math.max(0, Math.min(idx, gMax));
   document.getElementById('galleryTrack').style.transform = 'translateX(-' + (gIdx * gSlideW) + 'px)';
-  document.querySelectorAll('.gallery-dot').forEach(function(d, i) { d.classList.toggle('active', i === gIdx); });
+  document.querySelectorAll('.gallery-dot').forEach(function(d, i) {
+    var active = (i === gIdx);
+    d.classList.toggle('active', active);
+    if (active) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); }
+  });
 }
 
 function galleryMove(dir) { galleryGoTo(gIdx + dir); gRestart(); }

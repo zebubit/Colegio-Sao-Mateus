@@ -2,185 +2,279 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Colégio São Mateus · CSM · Cuiabá/MT</title>
-<meta name="description" content="Colégio São Mateus (CSM) em Cuiabá/MT. Desde 1980, do berçário ao Ensino Médio. Matrículas abertas. Fale conosco pelo WhatsApp.">
+<meta name="description" content="Colégio São Mateus (CSM) em Cuiabá/MT. Desde 1980, do berçário ao Ensino Médio. Matrículas 2027 abertas. Fale conosco pelo WhatsApp.">
 <meta name="theme-color" content="#0b1556">
 <meta property="og:title" content="Colégio São Mateus · CSM · Cuiabá/MT">
 <meta property="og:description" content="Desde 1980, do berçário ao Ensino Médio. Matrículas abertas!">
 <meta property="og:type" content="business.business">
-<meta property="og:image" content="https://csmcuiabamt.com.br/LOGO.webp">
+<meta property="og:image" content="https://csmcuiabamt.com.br/og-capa.jpg">
 <link rel="icon" href="https://csmcuiabamt.com.br/LOGO.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0b1556; --bg2:#14207a;
-    --azul:#1a2fa8; --amarelo:#f5c800; --amarelo2:#ffe033; --am-sf:rgba(245,200,0,.14);
-    --txt:#f3f5ff; --mut:#9fa9d8; --line:rgba(245,200,0,.18); --whats:#25D366;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Manrope',-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;
-    background-image:radial-gradient(820px 460px at 50% -8%, rgba(245,200,0,.18), transparent 60%),
-                     radial-gradient(640px 460px at 50% 108%, rgba(26,47,168,.7), transparent 60%);
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;}
-  .wrap{max-width:460px;margin:0 auto;padding:34px 22px 40px;display:flex;flex-direction:column;align-items:center;}
-
-  .logo{width:150px;height:150px;border-radius:50%;overflow:hidden;background:#fff;display:grid;place-items:center;padding:8px;
-    box-shadow:0 0 0 3px var(--amarelo),0 0 0 7px rgba(245,200,0,.18),0 22px 50px rgba(0,0,0,.5);}
-  .logo img{width:100%;height:100%;object-fit:contain;display:block;}
-
-  .nome{font-family:'Playfair Display',serif;font-weight:700;font-size:2rem;line-height:1.08;margin-top:20px;text-align:center;color:#fff;}
-  .selo{display:flex;align-items:center;gap:8px;color:var(--amarelo2);font-size:.74rem;font-weight:800;margin-top:8px;letter-spacing:.16em;text-transform:uppercase;text-align:center;}
-  .selo .dot{width:6px;height:6px;border-radius:50%;background:var(--amarelo);box-shadow:0 0 9px var(--amarelo);flex-shrink:0;}
-  .frase{color:#d4d9f5;font-size:.98rem;text-align:center;margin-top:13px;line-height:1.6;max-width:340px;}
-  .selos-mini{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:15px;}
-  .mini{font-size:.72rem;font-weight:700;color:var(--amarelo2);background:var(--am-sf);border:1px solid var(--line);padding:6px 12px;border-radius:50px;}
-
-  .sec{width:100%;text-align:left;font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--amarelo);margin:24px 0 2px;padding-left:4px;opacity:.9;}
-  .links{width:100%;margin-top:10px;display:flex;flex-direction:column;gap:11px;}
-  .lnk{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);border:1px solid var(--line);
-    border-radius:15px;padding:15px 17px;color:var(--txt);text-decoration:none;font-weight:700;font-size:1rem;
-    transition:transform .15s,border-color .2s,background .2s;position:relative;}
-  .lnk:hover{transform:translateY(-2px);border-color:rgba(255,224,51,.55);background:rgba(245,200,0,.08);}
-  .lnk .ic{width:30px;height:30px;flex-shrink:0;display:grid;place-items:center;color:var(--amarelo2);font-size:1.25rem;}
-  .lnk .ic svg{width:24px;height:24px;}
-  .lnk small{display:block;font-weight:500;font-size:.76rem;color:var(--mut);margin-top:2px;}
-  .lnk .seta{margin-left:auto;color:var(--mut);font-size:1.05rem;}
-  .lnk.destaque{background:linear-gradient(135deg,var(--amarelo),#d9a800);border-color:transparent;color:#0b1556;
-    box-shadow:0 12px 30px rgba(245,200,0,.4);overflow:hidden;isolation:isolate;}
-  .lnk.destaque .ic{color:#0b1556;}
-  .lnk.destaque small{color:rgba(11,21,86,.72);}
-  .lnk.destaque .seta{color:rgba(11,21,86,.72);}
-  .lnk.destaque::before{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;
-    background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 70%,transparent 100%);
-    transform:skewX(-20deg);z-index:1;animation:featuredFlash 3.5s ease-in-out infinite;pointer-events:none;}
-  @keyframes featuredFlash{0%{left:-100%}50%{left:130%}100%{left:130%}}
-
-  .cta-titulo{width:100%;text-align:center;margin:28px 0 12px;font-size:14px;font-weight:800;color:var(--txt);opacity:.9;}
-  .bio-cta{width:100%;padding:14px 16px;border-radius:14px;text-decoration:none;color:var(--txt);
-    background:linear-gradient(135deg,rgba(245,200,0,.12),rgba(255,255,255,.03));
-    border:1px dashed rgba(245,200,0,.5);display:flex;align-items:center;gap:13px;transition:all .25s;}
-  .bio-cta:hover{border-color:var(--amarelo2);transform:translateY(-2px);}
-  .bio-cta + .bio-cta{margin-top:10px;}
-  .bio-cta__icon{font-size:1.4rem;flex-shrink:0;}
-  .bio-cta__title{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--amarelo2);}
-  .bio-cta__sub{font-size:.74rem;color:var(--mut);margin-top:1px;}
-  .gratis-pisca{display:inline-block;color:#fff;font-style:normal;font-weight:800;font-size:.82rem;letter-spacing:.06em;margin-left:11px;animation:piscaGratis 1s steps(1) infinite;}
-  @keyframes piscaGratis{0%,49%{opacity:1}50%,100%{opacity:.12}}
-
-  .foot{margin-top:24px;text-align:center;color:#6c77b0;font-size:.78rem;line-height:1.6;}
-  .foot a{text-decoration:none;}
+:root{--bg:#070d3a;--bg2:#0b1556;--azul:#1a2fa8;--am:#f5c800;--am2:#ffe033;--ouro:linear-gradient(135deg,#ffe98a,#f5c800 45%,#c99700);--txt:#f3f5ff;--mut:#a7b0dd;--card:rgba(255,255,255,.055);--line:rgba(245,200,0,.2);--ser:'Playfair Display',Georgia,serif;--sans:'Manrope',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100dvh}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+img,svg,video{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--am);outline-offset:3px;border-radius:14px}
+.wrap{max-width:480px;margin:0 auto;padding:0 18px 120px;position:relative}
+/* capa */
+.capa{position:relative;max-width:480px;margin:0 auto;height:270px;overflow:hidden;background:#0b1556}
+.capa img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.04);animation:zoom 14s ease-in-out infinite alternate}
+.capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,58,.25) 0%,rgba(7,13,58,.1) 35%,var(--bg) 100%)}
+@keyframes zoom{to{transform:scale(1.14)}}
+.faixa-top{position:absolute;z-index:2;top:14px;left:0;right:0;display:flex;justify-content:center}
+.faixa-top span{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(7,13,58,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--am2)}
+.faixa-top i{width:6px;height:6px;border-radius:50%;background:var(--am);box-shadow:0 0 10px var(--am)}
+.id{position:relative;z-index:3;margin-top:-86px;text-align:center}
+.logo{width:148px;height:148px;margin:0 auto;border-radius:50%;background:#fff;padding:9px;box-shadow:0 0 0 3px var(--am),0 0 0 8px rgba(245,200,0,.18),0 24px 50px rgba(0,0,0,.55)}
+.logo img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+h1{font-family:var(--ser);font-weight:700;font-size:2.05rem;line-height:1.08;margin-top:18px}
+h1 em{font-style:italic;font-weight:600;background:var(--ouro);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:8px;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--am2)}
+.frase{margin:12px auto 0;max-width:340px;color:#d6dbf6;font-size:.96rem}
+/* botões */
+.cta{display:flex;align-items:center;gap:14px;margin-top:22px;padding:16px 18px;min-height:70px;border-radius:20px;background:var(--ouro);color:#0b1556;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 14px 34px rgba(245,200,0,.38);text-align:left}
+.cta::before{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);animation:flash 3.6s ease-in-out infinite;z-index:1;pointer-events:none}
+@keyframes flash{0%{left:-100%}50%,100%{left:130%}}
+.cta svg{width:30px;height:30px;flex-shrink:0}
+.cta b{display:block;font-size:1.08rem;font-weight:800;line-height:1.2}
+.cta small{font-size:.8rem;font-weight:600;opacity:.8}
+.cta2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.cta2 a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-weight:700;font-size:.9rem;transition:transform .2s,border-color .2s}
+.cta2 a:hover{transform:translateY(-2px);border-color:var(--am)}
+.cta2 svg{width:20px;height:20px;color:var(--am)}
+/* números */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}
+.num{padding:12px 4px;border-radius:16px;background:var(--card);border:1px solid var(--line);text-align:center}
+.num b{display:block;font-family:var(--ser);font-size:1.45rem;line-height:1;background:var(--ouro);-webkit-background-clip:text;background-clip:text;color:transparent}
+.num span{display:block;margin-top:5px;font-size:.62rem;font-weight:700;color:var(--mut);letter-spacing:.04em;line-height:1.2}
+/* seções */
+.label{display:flex;align-items:center;gap:10px;margin:38px 2px 14px;font-size:.7rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--am)}
+.label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(245,200,0,.55),transparent)}
+.titulo{font-family:var(--ser);font-size:1.45rem;line-height:1.15;margin:-4px 2px 14px}
+.titulo em{font-style:italic;color:var(--am2)}
+/* diferenciais */
+.dif{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dif div{display:flex;gap:10px;align-items:flex-start;padding:13px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.dif svg{flex:0 0 24px;width:24px;height:24px;color:var(--am);margin-top:1px}
+.dif b{display:block;font-size:.82rem;line-height:1.2}
+.dif small{display:block;margin-top:2px;font-size:.7rem;color:var(--mut);line-height:1.3}
+/* segmentos */
+.segs{display:flex;flex-direction:column;gap:12px}
+.seg{display:grid;grid-template-columns:128px 1fr;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid var(--line)}
+.seg-ph{position:relative;display:block;min-height:176px;overflow:hidden}
+.seg-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform 1s}
+.seg:hover .seg-ph img{transform:scale(1.07)}
+.seg-tx{padding:13px 13px 13px 14px;display:flex;flex-direction:column;min-width:0}
+.seg-tx small{font-size:.6rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--am)}
+.seg-tx b{font-family:var(--ser);font-size:1.12rem;line-height:1.12;margin-top:3px}
+.seg-tx span{font-size:.76rem;color:var(--mut);margin-top:5px;line-height:1.35}
+.seg-bt{display:flex;gap:7px;margin-top:auto;padding-top:10px}
+.seg-bt a{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:0 12px;border-radius:12px;font-size:.76rem;font-weight:800}
+.bt-s{border:1px solid var(--line);color:var(--txt)}
+.bt-w{background:var(--ouro);color:#0b1556}
+.bt-w svg{width:15px;height:15px}
+/* atividades */
+.nota{font-size:.84rem;color:var(--mut);margin:-4px 2px 12px}
+.car{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 14px;margin:0 -18px;padding-left:18px;padding-right:18px;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.at{position:relative;flex:0 0 66%;max-width:260px;scroll-snap-align:center;border-radius:20px;overflow:hidden;background:#0b1556;border:1px solid var(--line);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.at img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.at-tx{padding:12px 14px 14px}
+.at-tx b{display:block;font-family:var(--ser);font-size:1.1rem}
+.at-tx span{display:block;font-size:.74rem;color:var(--mut);margin-top:2px}
+.at-tx a{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-size:.78rem;font-weight:800;color:var(--am2)}
+.at-tx a svg{width:14px;height:14px}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:-2px}
+.dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25);transition:all .3s}
+.dots i.on{width:20px;border-radius:6px;background:var(--am)}
+/* vídeos */
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vid{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:#000;border:1px solid var(--line);cursor:pointer;padding:0;display:block;width:100%}
+.vid img,.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vid::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent 45%);pointer-events:none}
+.vid.on::after{display:none}
+.vid .pl{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--ouro);color:#0b1556;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.5)}
+.vid .pl svg{width:22px;height:22px;margin-left:3px}
+.vid em{position:absolute;z-index:2;left:10px;right:10px;bottom:10px;font-style:normal;font-size:.76rem;font-weight:800;text-align:left}
+.vid.on .pl,.vid.on em{display:none}
+/* estrutura */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:8px 13px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.78rem;font-weight:700;color:#e4e8ff}
+/* depoimentos */
+.rate{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,rgba(245,200,0,.14),rgba(255,255,255,.04));border:1px solid var(--line)}
+.rate b{font-family:var(--ser);font-size:2.2rem;line-height:1;background:var(--ouro);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rate .st{display:flex;gap:2px;color:var(--am)}.rate .st svg{width:16px;height:16px}
+.rate small{display:block;font-size:.72rem;color:var(--mut);margin-top:3px}
+.dep{margin-top:10px;padding:15px 16px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.dep q{display:block;quotes:none;font-size:.88rem;color:#e9ecff;line-height:1.55}
+.dep q::before{content:"“";font-family:var(--ser);color:var(--am);font-size:1.6rem;line-height:0;vertical-align:-.35em;margin-right:3px}
+.dep small{display:block;margin-top:9px;font-size:.72rem;font-weight:700;color:var(--am2)}
+/* visita */
+.mapa{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.mapa iframe{display:block;width:100%;height:190px;border:0;filter:grayscale(.25) contrast(1.05)}
+.hor{padding:14px 16px;display:grid;gap:8px}
+.hor div{display:flex;justify-content:space-between;font-size:.86rem}
+.hor div span:first-child{color:var(--mut)}
+.hor div b{font-weight:800}
+.hor .end{display:flex;gap:10px;align-items:flex-start;justify-content:flex-start;font-size:.84rem;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.hor .end svg{flex:0 0 20px;width:20px;height:20px;color:var(--am);margin-top:2px}
+.vbt{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 12px 14px}
+.vbt a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:.72rem;font-weight:800}
+.vbt svg{width:21px;height:21px;color:var(--am)}
+.redes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.redes a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-size:.7rem;font-weight:700;color:var(--mut)}
+.redes span{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff}
+.redes svg{width:20px;height:20px}
+/* rodapé padrão */
+.cta-t{text-align:center;font-weight:800;font-size:.95rem;color:#dfe4ff;margin:40px 0 12px}
+.bio-cta{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;margin-bottom:12px;background:linear-gradient(135deg,rgba(245,200,0,.12),rgba(255,255,255,.03));border:1px dashed rgba(245,200,0,.55);transition:transform .25s}
+.bio-cta:hover{transform:translateY(-3px)}
+.bio-cta svg{flex:0 0 28px;width:28px;height:28px}
+.bio-cta .t{font-family:var(--ser);font-style:italic;font-size:1.05rem;color:var(--am2);line-height:1.3}
+.bio-cta .s{font-size:.76rem;color:var(--mut);margin-top:2px}
+.zb{color:#e6bd4f;font-weight:800;font-style:normal}.bv{color:#C8FF00;font-weight:800;font-style:normal}
+.gratis-pisca{display:inline-block;color:#fff;font-style:normal;font-family:var(--sans);font-weight:800;font-size:.82rem;letter-spacing:.06em;margin-left:11px;animation:piscaGratis 1s steps(1) infinite}
+@keyframes piscaGratis{0%,49%{opacity:1}50%,100%{opacity:.12}}
+.foot{text-align:center;margin-top:20px;font-size:.74rem;color:#7f8ac2;line-height:1.7}
+.foot a{font-weight:800}
+/* barra fixa */
+.fixa{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(transparent,rgba(7,13,58,.97) 40%)}
+.fixa a{display:flex;align-items:center;justify-content:center;gap:10px;max-width:444px;margin:0 auto;min-height:54px;border-radius:999px;background:#25D366;color:#04210f;font-weight:800;box-shadow:0 10px 26px rgba(37,211,102,.32)}
+.fixa svg{width:22px;height:22px}
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(min-width:900px){
+  body{background:radial-gradient(900px 600px at 10% 6%,rgba(26,47,168,.55),transparent 70%),radial-gradient(800px 600px at 92% 94%,rgba(245,200,0,.12),transparent 70%),var(--bg)}
+  .capa,.wrap{box-shadow:0 0 80px rgba(26,47,168,.5);background:var(--bg)}
+}
+@media(max-width:360px){.seg{grid-template-columns:104px 1fr}.nums{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){.capa img,.cta::before,.gratis-pisca{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="logo"><img src="../LOGO.webp" alt="Colégio São Mateus"></div>
+<header class="capa"><img src="../CAPA.webp" alt="Fachada do Colégio São Mateus" fetchpriority="high"><div class="faixa-top"><span><i></i>Matrículas 2027 abertas</span></div></header>
 
-    <h1 class="nome">Colégio São Mateus</h1>
-    <div class="selo"><span class="dot"></span> CSM · Desde 1980 · Cuiabá/MT</div>
-    <p class="frase">Do berçário ao Ensino Médio. Desde 1980 formando gerações com tradição e cuidado. 🎓</p>
-    <div class="selos-mini">
-      <span class="mini">📚 Desde 1980</span>
-      <span class="mini">🎓 Berçário ao Médio</span>
-      <span class="mini">📍 Cuiabá-MT</span>
-      <span class="mini">🕐 Matutino · Vespertino · Integral</span>
-    </div>
+<main class="wrap">
+  <section class="id">
+    <div class="logo"><img src="../LOGO.webp" alt="Logo do Colégio São Mateus" width="130" height="130"></div>
+    <h1>Colégio <em>São Mateus</em></h1>
+    <div class="sub">CSM · Desde 1980 · Cuiabá/MT</div>
+    <p class="frase">Do berçário ao Ensino Médio, formando gerações com tradição, metodologia ativa e muito cuidado.</p>
+  </section>
 
-    <div class="sec">Matrículas</div>
-    <div class="links">
-      <a class="lnk destaque" href="https://wa.me/5565984427124?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20matr%C3%ADculas%20no%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener">
-        <span class="ic">📝</span>
-        <div>Matrículas abertas<small>Garanta a vaga do seu filho · fale conosco</small></div>
-        <span class="seta">↗</span>
-      </a>
-    </div>
-
-    <div class="sec">Site e Redes</div>
-    <div class="links">
-      <a class="lnk" href="https://csmcuiabamt.com.br" target="_blank" rel="noopener">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg></span>
-        <div>Site oficial<small>csmcuiabamt.com.br</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="https://instagram.com/colegiosao.mateus" target="_blank" rel="noopener">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C4 15.58 4 15.2 4 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.06A4.94 4.94 0 1 0 12 16.94 4.94 4.94 0 0 0 12 7.06zm0 1.8a3.14 3.14 0 1 1 0 6.28 3.14 3.14 0 0 1 0-6.28zm5.13-2.93a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg></span>
-        <div>Instagram<small>@colegiosao.mateus</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="https://facebook.com/csmcolegiosaomateus" target="_blank" rel="noopener">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></span>
-        <div>Facebook<small>Colégio São Mateus</small></div>
-        <span class="seta">↗</span>
-      </a>
-    </div>
-
-    <div class="sec">Nossos Segmentos</div>
-    <div class="links">
-      <a class="lnk" href="https://csmcuiabamt.com.br/educacao-infantil.html" target="_blank" rel="noopener">
-        <span class="ic">🧸</span>
-        <div>Educação Infantil &amp; Berçário<small>Primeiros passos com carinho</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="https://csmcuiabamt.com.br/fundamental-1.html" target="_blank" rel="noopener">
-        <span class="ic">✏️</span>
-        <div>Ensino Fundamental I<small>1º ao 5º ano</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="https://csmcuiabamt.com.br/fundamental-2.html" target="_blank" rel="noopener">
-        <span class="ic">📐</span>
-        <div>Ensino Fundamental II<small>6º ao 9º ano</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="https://csmcuiabamt.com.br/ensino-medio.html" target="_blank" rel="noopener">
-        <span class="ic">🎓</span>
-        <div>Ensino Médio<small>Preparação para o futuro e o vestibular</small></div>
-        <span class="seta">↗</span>
-      </a>
-    </div>
-
-    <div class="sec">Fale Conosco</div>
-    <div class="links">
-      <a class="lnk" href="https://wa.me/5565984427124?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3.1S6.8 7 7.1 6.7c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.2.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.6-.1l.8-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1z"/></svg></span>
-        <div>WhatsApp<small>(65) 98442-7124</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="tel:+556536343000">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
-        <div>Telefone fixo<small>(65) 3634-3000</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="https://www.google.com/maps/dir/?api=1&destination=Av.+It%C3%A1lia,+17+-+Jardim+Tropical,+Cuiab%C3%A1+-+MT,+78065-158" target="_blank" rel="noopener">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-        <div>Como chegar<small>Av. Itália, 17 · Jardim Tropical · Cuiabá</small></div>
-        <span class="seta">↗</span>
-      </a>
-      <a class="lnk" href="mailto:csmcolegiosaomateus@gmail.com">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-        <div>E-mail<small>csmcolegiosaomateus@gmail.com</small></div>
-        <span class="seta">↗</span>
-      </a>
-    </div>
-
-    <div class="cta-titulo">Quero um link da bio igual a esse</div>
-    <a class="bio-cta" href="https://wa.me/5534993421500?text=Ol%C3%A1!%20Vim%20pela%20bio%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus%20e%20quero%20um%20link%20da%20bio%20premium%20igual%20pra%20mim." target="_blank" rel="noopener">
-      <span class="bio-cta__icon">✨</span>
-      <div>
-        <div class="bio-cta__title">Feito pela <span style="color:#e6bd4f">Zebubit</span> <span class="gratis-pisca">PERSONALIZADA</span></div>
-        <div class="bio-cta__sub">feita à mão pra você</div>
-      </div>
-    </a>
-    <a class="bio-cta" href="https://biovenda.app.br/ref/saomateus" target="_blank" rel="noopener">
-      <span class="bio-cta__icon">⚡</span>
-      <div>
-        <div class="bio-cta__title">Ou crie a sua no <span style="color:#C8FF00;font-style:normal">BioVenda</span> <span class="gratis-pisca">GRÁTIS</span></div>
-        <div class="bio-cta__sub">Você mesmo monta em 2 minutos</div>
-      </div>
-    </a>
-
-    <footer class="foot">© 2026 Colégio São Mateus · CSM · Cuiabá/MT<br>Desenvolvido por <a href="https://zebubit.com.br" target="_blank" rel="noopener" style="color:#e6bd4f;font-weight:800">Zebubit</a> · com <a href="https://biovenda.app.br" target="_blank" rel="noopener" style="color:#C8FF00;font-weight:800">BioVenda</a></footer>
+  <a class="cta" href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20as%20matr%C3%ADculas%202027%20no%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.04.89 2.19.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.27.72 1.18 1.54 1.91 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.62-.17 1.3z"/></svg><span><b>Garantir a vaga do meu filho</b><small>Fale com a secretaria pelo WhatsApp</small></span></a>
+  <div class="cta2">
+    <a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20agendar%20uma%20visita%20ao%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendar visita</a>
+    <a href="https://csmcuiabamt.com.br" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5a14.5 14.5 0 0 1 0 19 14.5 14.5 0 0 1 0-19z"/></svg>Site oficial</a>
   </div>
+
+  <div class="nums rv">
+    <div class="num"><b id="anos">46</b><span>anos de história</span></div>
+    <div class="num"><b>4,7</b><span>avaliação média</span></div>
+    <div class="num"><b>0 a 17</b><span>berçário ao médio</span></div>
+    <div class="num"><b>7h</b><span>às 18h, seg a sex</span></div>
+  </div>
+
+  <span class="label rv">Por que o CSM</span>
+  <div class="dif rv">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg><span><b>Metodologia ativa</b><small>O aluno é protagonista do aprendizado</small></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><span><b>Plano Educacional Individual</b><small>Cada ritmo e potencial respeitados</small></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span><b>Inclusão PCD</b><small>Ensino especializado e suporte adequado</small></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5M22 9v6"/></svg><span><b>Aprovações na UFMT</b><small>Pré-ENEM e preparação para o vestibular</small></span></div>
+  </div>
+
+  <span class="label rv">Nossos segmentos</span>
+  <div class="segs"><div class="seg rv"><a class="seg-ph" href="https://csmcuiabamt.com.br/educacao-infantil" target="_blank" rel="noopener" aria-label="Conhecer Berçário e Educação Infantil"><img src="../FOTO6.webp" alt="Berçário e Educação Infantil" loading="lazy"></a><div class="seg-tx"><small>Berçário ao pré</small><b>Berçário e Educação Infantil</b><span>Cuidado, segurança e estímulos desde os primeiros meses.</span><div class="seg-bt"><a class="bt-s" href="https://csmcuiabamt.com.br/educacao-infantil" target="_blank" rel="noopener">Conhecer</a><a class="bt-w" href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20informa%C3%A7%C3%B5es%20de%20matr%C3%ADcula%20para%20o%20Ber%C3%A7%C3%A1rio%20/%20Educa%C3%A7%C3%A3o%20Infantil%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.04.89 2.19.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.27.72 1.18 1.54 1.91 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.62-.17 1.3z"/></svg>Matrícula</a></div></div></div><div class="seg rv"><a class="seg-ph" href="https://csmcuiabamt.com.br/fundamental-1" target="_blank" rel="noopener" aria-label="Conhecer Ensino Fundamental I"><img src="../FOTO8.webp" alt="Ensino Fundamental I" loading="lazy"></a><div class="seg-tx"><small>Anos iniciais</small><b>Ensino Fundamental I</b><span>1º ao 5º ano com metodologia ativa e acompanhamento próximo.</span><div class="seg-bt"><a class="bt-s" href="https://csmcuiabamt.com.br/fundamental-1" target="_blank" rel="noopener">Conhecer</a><a class="bt-w" href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20informa%C3%A7%C3%B5es%20de%20matr%C3%ADcula%20para%20o%20Ensino%20Fundamental%20I%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.04.89 2.19.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.27.72 1.18 1.54 1.91 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.62-.17 1.3z"/></svg>Matrícula</a></div></div></div><div class="seg rv"><a class="seg-ph" href="https://csmcuiabamt.com.br/fundamental-2" target="_blank" rel="noopener" aria-label="Conhecer Ensino Fundamental II"><img src="../FOTO1.webp" alt="Ensino Fundamental II" loading="lazy"></a><div class="seg-tx"><small>Anos finais</small><b>Ensino Fundamental II</b><span>6º ao 9º ano com Plano Educacional Individual e inclusão PCD.</span><div class="seg-bt"><a class="bt-s" href="https://csmcuiabamt.com.br/fundamental-2" target="_blank" rel="noopener">Conhecer</a><a class="bt-w" href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20informa%C3%A7%C3%B5es%20de%20matr%C3%ADcula%20para%20o%20Ensino%20Fundamental%20II%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.04.89 2.19.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.27.72 1.18 1.54 1.91 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.62-.17 1.3z"/></svg>Matrícula</a></div></div></div><div class="seg rv"><a class="seg-ph" href="https://csmcuiabamt.com.br/ensino-medio" target="_blank" rel="noopener" aria-label="Conhecer Ensino Médio"><img src="../FOTO7.webp" alt="Ensino Médio" loading="lazy"></a><div class="seg-tx"><small>Pré-ENEM · UFMT</small><b>Ensino Médio</b><span>Preparação completa para o ENEM, o vestibular e a vida.</span><div class="seg-bt"><a class="bt-s" href="https://csmcuiabamt.com.br/ensino-medio" target="_blank" rel="noopener">Conhecer</a><a class="bt-w" href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20informa%C3%A7%C3%B5es%20de%20matr%C3%ADcula%20para%20o%20Ensino%20M%C3%A9dio%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.04.89 2.19.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.27.72 1.18 1.54 1.91 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.62-.17 1.3z"/></svg>Matrícula</a></div></div></div></div>
+
+  <span class="label rv">Muito além das aulas</span>
+  <p class="nota rv">Atividades abertas para alunos e não alunos. Peça uma aula experimental.</p>
+  <div class="car" id="car"><div class="at"><img src="../FOTO4.webp" alt="Natação" loading="lazy"><div class="at-tx"><b>Natação</b><span>Saúde, disciplina e superação</span><a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20agendar%20uma%20aula%20experimental%20de%20Nata%C3%A7%C3%A3o%20no%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener">Aula experimental <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div><div class="at"><img src="../FOTO5.webp" alt="Música e Violão" loading="lazy"><div class="at-tx"><b>Música e Violão</b><span>Criatividade e expressão</span><a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20agendar%20uma%20aula%20experimental%20de%20M%C3%BAsica%20e%20Viol%C3%A3o%20no%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener">Aula experimental <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div><div class="at"><img src="../FOTO2.webp" alt="Vôlei" loading="lazy"><div class="at-tx"><b>Vôlei</b><span>Equipe, agilidade e foco</span><a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20agendar%20uma%20aula%20experimental%20de%20V%C3%B4lei%20no%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener">Aula experimental <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div><div class="at"><img src="../FOTO3.webp" alt="Karatê" loading="lazy"><div class="at-tx"><b>Karatê</b><span>Corpo e mente fortalecidos</span><a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20agendar%20uma%20aula%20experimental%20de%20Karat%C3%AA%20no%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener">Aula experimental <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div><div class="at"><img src="../FOTO10.webp" alt="Xadrez" loading="lazy"><div class="at-tx"><b>Xadrez</b><span>Raciocínio e estratégia</span><a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20agendar%20uma%20aula%20experimental%20de%20Xadrez%20no%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener">Aula experimental <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div></div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+
+  <span class="label rv">O CSM em movimento</span>
+  <div class="vids rv">
+    <button class="vid" type="button" data-src="../VID3.mp4" aria-label="Assistir: Fala, Profe! História"><img src="../POSTER3.webp" alt="" loading="lazy"><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><em>Fala, Profe!<br>História</em></button>
+    <button class="vid" type="button" data-src="../VID4.mp4" aria-label="Assistir: Fala, Profe! Física"><img src="../POSTER4.webp" alt="" loading="lazy"><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><em>Fala, Profe!<br>Física</em></button>
+  </div>
+
+  <span class="label rv">Nossa estrutura</span>
+  <div class="chips rv"><span>Piscina</span><span>Quadra coberta</span><span>Biblioteca e sala de leitura</span><span>Refeitório</span><span>Área verde</span><span>Parquinho</span><span>Berçário</span><span>Internet e recursos digitais</span><span>Pátio coberto</span></div>
+
+  <span class="label rv">Quem confia</span>
+  <div class="rate rv"><b>4,7</b><div><div class="st"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg></div><small>avaliação média de pais e alunos</small></div></div>
+  <div class="dep rv"><q>Minha filha está no colégio desde 2014, entrou com 2 anos. Nunca passei por nenhum problema, só tenho elogios aos cuidados e carinho com ela.</q><small>Mãe de aluna · aluna desde 2014</small></div>
+  <div class="dep rv"><q>O CSM foi fundamental na aprovação da minha filha na UFMT. Os professores são dedicados e o ambiente é muito acolhedor.</q><small>Pai de ex-aluna · aprovada na UFMT</small></div>
+  <div class="dep rv"><q>Meu filho adora as atividades extracurriculares! O karatê mudou a postura dele, e a natação melhorou muito a saúde.</q><small>Mãe de aluno · Ensino Fundamental</small></div>
+
+  <span class="label rv">Venha nos visitar</span>
+  <div class="mapa rv">
+    <iframe title="Mapa do Colégio São Mateus" src="https://www.google.com/maps?q=Av.+It%C3%A1lia,+17,+Jardim+Tropical,+Cuiab%C3%A1+-+MT&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="hor">
+      <div class="end"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-7.6-8-13a8 8 0 0 1 16 0c0 5.4-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg><span>Av. Itália, 17 · Jardim Tropical<br>Cuiabá/MT · CEP 78065-158</span></div>
+      <div><span>Segunda a sexta</span><b>07h00 às 18h00</b></div>
+      <div><span>Sábado</span><b>07h00 às 12h00</b></div>
+    </div>
+    <div class="vbt">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+It%C3%A1lia,+17+-+Jardim+Tropical,+Cuiab%C3%A1+-+MT,+78065-158" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-7.6-8-13a8 8 0 0 1 16 0c0 5.4-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>Como chegar</a>
+      <a href="tel:+556536343000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(65) 3634-3000</a>
+      <a href="mailto:csmcolegiosaomateus@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>E-mail</a>
+    </div>
+  </div>
+  <div class="redes rv">
+    <a href="https://instagram.com/colegiosao.mateus" target="_blank" rel="noopener"><span style="background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>Instagram</a>
+    <a href="https://facebook.com/csmcolegiosaomateus" target="_blank" rel="noopener"><span style="background:#1877F2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v1.9H8v3.2h2.6V22H14v-10.3h2.6l.4-3.2H14z"/></svg></span>Facebook</a>
+    <a href="https://csmcuiabamt.com.br" target="_blank" rel="noopener"><span style="background:#1a2fa8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5a14.5 14.5 0 0 1 0 19 14.5 14.5 0 0 1 0-19z"/></svg></span>Site</a>
+    <a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><span style="background:#25D366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.04.89 2.19.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.27.72 1.18 1.54 1.91 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.62-.17 1.3z"/></svg></span>WhatsApp</a>
+  </div>
+
+  <div class="cta-t">Quero um link da bio igual a esse</div>
+  <a class="bio-cta" href="https://wa.me/5534993421500?text=Ol%C3%A1%21%20Vim%20pela%20bio%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus%20e%20quero%20um%20link%20da%20bio%20premium%20igual%20pra%20mim." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#e6bd4f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4L12 3z"/></svg>
+    <div><div class="t">Feito pela <span class="zb">Zebubit</span> <span class="gratis-pisca">PERSONALIZADA</span></div><div class="s">feita à mão pra você</div></div>
+  </a>
+  <a class="bio-cta" href="https://biovenda.app.br/ref/saomateus" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+    <div><div class="t">Ou crie a sua no <span class="bv">BioVenda</span> <span class="gratis-pisca">GRÁTIS</span></div><div class="s">Você mesmo monta em 2 minutos</div></div>
+  </a>
+  <footer class="foot">© 2026 Colégio São Mateus · CNPJ 00.817.900/0001-26<br>Av. Itália, 17 · Jardim Tropical · Cuiabá/MT<br>Desenvolvido por <a href="https://zebubit.com.br" target="_blank" rel="noopener" style="color:#e6bd4f">Zebubit</a> · com <a href="https://biovenda.app.br" target="_blank" rel="noopener" style="color:#C8FF00">BioVenda</a></footer>
+</main>
+
+<div class="fixa"><a href="https://wa.me/5565984427124?text=Ol%C3%A1%21%20Vim%20pelo%20link%20da%20bio%20e%20quero%20falar%20com%20a%20secretaria%20do%20Col%C3%A9gio%20S%C3%A3o%20Mateus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.04.89 2.19.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.27.72 1.18 1.54 1.91 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.62-.17 1.3z"/></svg>Falar com a secretaria</a></div>
+
+<script>
+(function(){
+  var y=new Date().getFullYear()-1980; var a=document.getElementById('anos'); if(a&&y>0)a.textContent=y;
+  /* aparece ao rolar */
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  }else{els.forEach(function(e){e.classList.add('in');});}
+  /* indicador do carrossel */
+  var car=document.getElementById('car'),dots=document.querySelectorAll('#dots i');
+  if(car)car.addEventListener('scroll',function(){
+    var it=car.children,c=car.scrollLeft+car.clientWidth/2,best=0,d=1e9;
+    for(var i=0;i<it.length;i++){var m=it[i].offsetLeft+it[i].offsetWidth/2,x=Math.abs(m-c);if(x<d){d=x;best=i;}}
+    dots.forEach(function(e,i){e.classList.toggle('on',i===best);});
+  },{passive:true});
+  /* vídeos: só carregam quando a pessoa toca */
+  document.querySelectorAll('.vid').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(b.classList.contains('on'))return;
+      var v=document.createElement('video');v.src=b.dataset.src;v.controls=true;v.autoplay=true;v.playsInline=true;
+      b.appendChild(v);b.classList.add('on');
+    });
+  });
+})();
+</script>
 </body>
 </html>
